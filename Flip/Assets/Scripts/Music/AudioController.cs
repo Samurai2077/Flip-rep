@@ -7,7 +7,8 @@ public class AudioController : MonoBehaviour
     [SerializeField] AudioSource win = null;
 
     public static AudioController Instance = null;
-    public string Author = "Music: https://www.bensound.com/royalty-free-music";
+    public string Author = "Music: https://www.bensound.com/royalty-free-music" + "\n" +
+        "Composer: Benjamin Tissot";
 
     public void Awake()
     {

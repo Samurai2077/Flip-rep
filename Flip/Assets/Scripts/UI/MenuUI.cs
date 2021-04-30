@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MenuUI : MonoBehaviour
@@ -12,10 +10,5 @@ public class MenuUI : MonoBehaviour
     public void Training()
     {
         SceneController.LoadTraining();
-    }
-
-    public void Exit()
-    {
-        Application.Quit();
     }
 }
