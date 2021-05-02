@@ -26,11 +26,11 @@ public class Level : MonoBehaviour
         tiles = level;
         table.localScale = new Vector3(Mathf.Sqrt(level.Count), Mathf.Sqrt(level.Count), 1);
         Camera.main.orthographicSize = Mathf.Sqrt(level.Count) + 1;
-        int difficult = Mathf.Min(LevelSettings.LevelNumber / 25 + 1, 11);
+        int difficult = Mathf.Min(Mathf.Max((int)Mathf.Sqrt(LevelSettings.LevelNumber) - 1, 1), 15);
         do
         {
             for (int i = 0; i < difficult; i++) Shuffle();
-            difficult--;
+            difficult++;
         } while (CheckWin());
     }
 

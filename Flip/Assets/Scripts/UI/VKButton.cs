@@ -7,6 +7,9 @@ public class VKButton : MonoBehaviour
 
     public void OpenSite()
     {
-        Process.Start(site);
+        Process prc = new Process();
+        prc.StartInfo.FileName = site;
+        prc.StartInfo.UseShellExecute = true;
+        prc.Start();
     }
 }
